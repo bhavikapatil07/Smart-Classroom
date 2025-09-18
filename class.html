@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Smart Classroom & Timetable</title>
+ <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="class.css">
+ <link rel="stylesheet" href="class.js">
+</head>
+<body>
+ <!-- Header -->
+ <header>
+ <div class="container">
+ <div class="header-content">
+ <div class="logo">
+ <div class="logo-circle">
+ <i class="fas fa-graduation-cap"></i>
+ </div>
+ <div class="logo-text">Smart<span>Class</span></div>
+ </div>
+ 
+ <nav>
+ <ul>
+ <li><a href="#">Dashboard</a></li>
+ <li><a href="#">Timetable</a></li>
+ <li><a href="#">Resources</a></li>
+ <li><a href="#">Assignments</a></li>
+ <li><a href="#">Messages</a></li>
+ </ul>
+ </nav>
+ </div>
+ </div>
+ </header>
+ 
+ <!-- Main Content -->
+ <div class="container">
+ <div class="main-content">
+ <!-- Sidebar -->
+ <div class="sidebar">
+ <h2 class="sidebar-title">My Classes</h2>
+ 
+ <div class="class-info">
+ <div class="class-card">
+ <h3>Science 101</h3>
+ <p><i class="fas fa-clock"></i> Mon, Wed, Fri - 9:00 AM</p>
+ <p><i class="fas fa-map-marker-alt"></i> Room 302</p>
+ <p><i class="fas fa-users"></i> 24 Students</p>
+ </div>
+ <div class="class-card">
+ <h3>Mathematics</h3>
+ <p><i class="fas fa-clock"></i> Tue, Thu - 11:00 AM</p>
+ <p><i class="fas fa-map-marker-alt"></i> Room 215</p>
+ <p><i class="fas fa-users"></i> 20 Students</p>
+ </div>
+ <div class="class-card">
+ <h3>English Literature</h3>
+ <p><i class="fas fa-clock"></i> Mon, Wed - 2:00 PM</p>
+ <p><i class="fas fa-map-marker-alt"></i> Room 110</p>
+ <p><i class="fas fa-users"></i> 18 Students</p>
+ </div>
+ </div>
+ <h2 class="sidebar-title">Upcoming Events</h2>
+ <div class="class-card">
+ <h3>Science Fair</h3>
+ <p><i class="fas fa-calendar-day"></i> October 15, 2023</p>
+ <p><i class="fas fa-clock"></i> 10:00 AM - 2:00 PM</p>
+ </div>
+ <div class="class-card">
+ <h3>Parent-Teacher Meeting</h3>
+ <p><i class="fas fa-calendar-day"></i> October 20, 2023</p>
+ <p><i class="fas fa-clock"></i> 4:00 PM - 6:00 PM</p>
+ </div>
+ </div>
+ <!-- Timetable -->
+ <div class="timetable">
+ <div class="timetable-header">
+ <h2 class="timetable-title">Weekly Schedule</h2>
+ <div class="week-navigation">
+ <button id="prev-week"><i class="fas 
+fa-chevron-left"></i></button>
+ <span id="week-range">October 9 - 13, 2023</span>
+ <button id="next-week"><i class="fas 
+fa-chevron-right"></i></button>
+ </div>
+ </div>
+ <table class="schedule">
+ <thead>
+ <tr>
+ <th>Time</th>
+ <th>Monday</th>
+ <th>Tuesday</th>
+ <th>Wednesday</th>
+ <th>Thursday</th>
+ <th>Friday</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>8:00 - 9:00</td>
+ <td>
+ <div class="time-slot">8:00 - 9:00</div>
+ <div class="subject">Science 101</div>
+ <div class="room">Room 302</div>
+ </td>
+ <td></td>
+ <td>
+ <div class="time-slot">8:00 - 9:00</div>
+ <div class="subject">Science 101</div>
+ <div class="room">Room 302</div>
+ </td>
+ <td></td>
+ <td>
+ <div class="time-slot">8:00 - 9:00</div>
+ <div class="subject">Science 101</div>
+ <div class="room">Room 302</div>
+ </td>
+ </tr>
+ <tr>
+ <td>9:00 - 10:00</td>
+ <td></td>
+ <td>
+ <div class="time-slot">9:00 - 10:00</div>
+ <div class="subject">Mathematics</div>
+ <div class="room">Room 215</div>
+ </td>
+ <td></td>
+ <td>
+ <div class="time-slot">9:00 - 10:00</div>
+ <div class="subject">Mathematics</div>
+ <div class="room">Room 215</div>
+ </td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>10:00 - 11:00</td>
+ <td>
+ <div class="time-slot">10:00 - 11:00</div>
+ <div class="subject">Planning</div>
+ <div class="room">Faculty Room</div>
+ </td>
+ <td>
+ <div class="time-slot">10:00 - 11:00</div>
+ <div class="subject">Planning</div>
+ <div class="room">Faculty Room</div>
+ </td>
+ <td>
+ <div class="time-slot">10:00 - 11:00</div>
+ <div class="subject">Planning</div>
+ <div class="room">Faculty Room</div>
+ </td>
+ <td>
+ <div class="time-slot">10:00 - 11:00</div>
+ <div class="subject">Planning</div>
+ <div class="room">Faculty Room</div>
+ </td>
+ <td>
+ <div class="time-slot">10:00 - 11:00</div>
+ <div class="subject">Planning</div>
+ <div class="room">Faculty Room</div>
+ </td>
+ </tr>
+ <tr>
+ <td>11:00 - 12:00</td>
+ <td></td>
+ <td class="current-class">
+ <div class="time-slot">11:00 - 12:00</div>
+ <div class="subject">Mathematics</div>
+ <div class="room">Room 215</div>
+ </td>
+ <td></td>
+ <td class="current-class">
+ <div class="time-slot">11:00 - 12:00</div>
+ <div class="subject">Mathematics</div>
+ <div class="room">Room 215</div>
+ </td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>12:00 - 1:00</td>
+ <td colspan="5" style="text-align: center; 
+background-color: #f9f9f9;">
+ <div class="subject">Lunch Break</div>
+ </td>
+ </tr>
+ <tr>
+ <td>1:00 - 2:00</td>
+ <td>
+ <div class="time-slot">1:00 - 2:00</div>
+ <div class="subject">English Literature</div>
+ <div class="room">Room 110</div>
+ </td>
+ <td></td>
+ <td>
+ <div class="time-slot">1:00 - 2:00</div>
+ <div class="subject">English Literature</div>
+ <div class="room">Room 110</div>
+ </td>
+ <td></td>
+ <td>
+ <div class="time-slot">1:00 - 2:00</div>
+ <div class="subject">Faculty Meeting</div>
+ <div class="room">Conference Room</div>
+ </td>
+ </tr>
+ <tr>
+ <td>2:00 - 3:00</td>
+ <td></td>
+ <td>
+ <div class="time-slot">2:00 - 3:00</div>
+ <div class="subject">Office Hours</div>
+ <div class="room">Room 302</div>
+ </td>
+ <td></td>
+ <td>
+ <div class="time-slot">2:00 - 3:00</div>
+ <div class="subject">Office Hours</div>
+ <div class="room">Room 302</div>
+ </td>
+ <td>
+ <div class="time-slot">2:00 - 3:00</div>
+ <div class="subject">Science Lab</div>
+ <div class="room">Lab 105</div>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ <!-- Smart Classroom Section -->
+ <div class="smart-classroom">
+ <div class="smart-classroom-header">
+ <h2 class="smart-classroom-title">Smart Classroom Management</h2>
+ <div class="class-controls">
+ <button class="control-btn"><i class="fas fa-video"></i> Start 
+Class</button>
+ <button class="control-btn"><i class="fas fa-book"></i> 
+Resources</button>
+ <button class="control-btn"><i class="fas fa-chalkboard"></i> 
+Whiteboard</button>
+ </div>
+ </div>
+ <div class="class-status">
+ <div class="status-card">
+ <div class="status-icon">
+ <i class="fas fa-plug"></i>
+ </div>
+ <div class="status-info">
+ <h3>Devices Connected</h3>
+ <p>24/28 students online</p>
+ </div>
+ </div>
+ <div class="status-card">
+ <div class="status-icon">
+ <i class="fas fa-tasks"></i>
+ </div>
+ <div class="status-info">
+ <h3>Assignments</h3>
+ <p>3 pending submissions</p>
+ </div>
+ </div>
+ <div class="status-card">
+ <div class="status-icon">
+ <i class="fas fa-question-circle"></i>
+ </div>
+ <div class="status-info">
+ <h3>Questions</h3>
+ <p>5 unanswered questions</p>
+ </div>
+ </div>
+ </div>
+ <div class="resources">
+ <h3>Teaching Resources</h3>
+ <div class="resource-list">
+ <div class="resource-item">
+ <div class="resource-icon">
+ <i class="fas fa-book"></i>
+ </div>
+ <h4>Lesson Plans</h4>
+ <p>Weekly planning resources</p>
+ </div>
+ <div class="resource-item">
+ <div class="resource-icon">
+ <i class="fas fa-file-pdf"></i>
+ </div>
+ <h4>Worksheets</h4>
+ <p>Printable activities</p>
+ </div>
+ <div class="resource-item">
+ <div class="resource-icon">
+ <i class="fas fa-video"></i>
+ </div>
+ <h4>Videos</h4>
+ <p>Educational content</p>
+ </div>
+ <div class="resource-item">
+ <div class="resource-icon">
+ <i class="fas fa-chart-bar"></i>
+ </div>
+ <h4>Assessments</h4>
+ <p>Tests and quizzes</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- Footer -->
+ <footer>
+ <div class="container">
+ <div class="footer-content">
+ <div class="footer-column">
+ <h3>SmartClass</h3>
+ <p>An integrated platform for modern education and classroom 
+management.</p>
+ </div>
+ <div class="footer-column">
+ <h3>Quick Links</h3>
+ <ul>
+ <li><a href="#">Dashboard</a></li>
+ <li><a href="#">Timetable</a></li>
+ <li><a href="#">Resources</a></li>
+ <li><a href="#">Assignments</a></li>
+ </ul>
+ </div>
+ <div class="footer-column">
+ <h3>Support</h3>
+ <ul>
+ <li><a href="#">Help Center</a></li>
+ <li><a href="#">Contact Us</a></li>
+ <li><a href="#">Feedback</a></li>
+ <li><a href="#">System Status</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="copyright">
+ <p>&copy; 2023 SmartClass. All rights reserved.</p>
+ </div>
+ </div>
+ </footer>
+ <script src="style.js"></script>
+</body>
+</html>

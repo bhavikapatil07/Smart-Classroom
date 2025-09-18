@@ -1,0 +1,109 @@
+body {
+    background: linear-gradient(135deg, #f9f6f9 0%, #49a6e3 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c2c7cf;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: #F6FAFD;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(26, 61, 99, 0.15); /* uses #1A3D63 */
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    color: #01060b;
+    text-align: center;
+}
+
+/* Login form fields */
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #89bce6;
+    color: #020a17;
+    font-size: 16px;
+}
+
+/* Forgot password */
+.forgot-password {
+    width: 100%;
+    text-align: right;
+    font-size: 14px;
+    margin: 5px 0 15px 0;
+    color: #1A3D63;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Login button */
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background: #0d69c4;
+    color: #F6FAFD;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.25s;
+    margin-bottom: 15px;
+}
+
+.login-form button:hover {
+    background: #4A7FA7;
+}
+
+/* Google button */
+.google-btn {
+    width: 100%;
+    padding: 12px;
+    background: #469ae0;
+    border: 2px solid #1A3D63;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #cce3fc;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.25s, color 0.25s;
+}
+
+.google-btn:hover {
+    background: #1674d8;
+    color: #cde0ee;
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.info-text {
+    margin-top: 18px;
+    color: #010b12;
+    font-size: 14px;
+    text-align: center;
+}
